@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/form.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <main id="main1">
+        <section id="section1">
+            <nav id="nav">
+                <h1 id="logo">Home<i class="fa-solid fa-house-laptop"></i>servO</h1>
+            </nav>
+            <nav id="sub-nav">
+                <ol id="sub-nav-ol">
+                    <li class="sub-nav-li"><a class="toreg" id="home" href="#">Home</a></li>
+                    <li class="sub-nav-li"><a class="toreg" href="#">Contact</a></li>
+                    <li class="sub-nav-li"><a class="toreg" href="#">About</a></li>
+                </ol>
+            </nav>
+        </section>
+        <section id="section2">
+            <div id="welcome-note">
+                <h1>Hi, there</h1>
+                <p id="wn1">Welcome to HomeServO Application</p>
+                <p id="wn2">Fill the form and register as a Customer and load your work and grab the vendors, make work
+                    hard and perfectly for your good earnings.</p>
+            </div>
+            <div id="formdiv">
+                <h1>Register as Vendor</h1>
+                <form id="form">
+                    <div class="inputdiv">
+                        <input id="in-name" class="input" type="text" placeholder="Full Name" oninput="nameValid()">
+                        <input id="in-email" class="input" type="email" placeholder="Email" oninput="emailValid()">
+                    </div>
+                    <span id="name-span" class="mandatory">This field is Mandatory</span><span id="email-span"
+                        class="mandatory">This field is Mandatory</span>
+                    <div class="inputdiv">
+                        <input id="in-phone" class="input" type="number" placeholder="Phone Number"
+                            oninput="phoneValid()">
+                        <input id="in-famcount" class="input" type="text" placeholder="Role"
+                            oninput="roleValid()">
+                    </div>
+                    <span id="phone-span" class="mandatory">This field is Mandatory</span><span id="family-span"
+                        class="mandatory">This field is Mandatory</span>
+                    <div class="inputdiv">
+                        <div class="psw-div">
+                            <input id="in-psw" class="input" type="password" placeholder="Password"
+                                oninput="pswValidation()">
+                            <div>
+                                <i id="eye" class="fa-solid fa-eye" onmousedown="showpsw()" onmouseup="hidepsw()"></i>
+                            </div>
+                        </div>
+                        <div class="psw-div">
+                            <input id="in-cpsw" class="input" type="password" placeholder="Confirm Password"
+                                oninput="confirmPsw()">
+                            <div>
+                                <i id="ceye" class="fa-solid fa-eye" onmousedown="showcpsw()"
+                                    onmouseup="hidecpsw()"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="psw-valid">
+                        <li class="psw-valid-li" id="pvl1">Minimum 8 characters</li>
+                        <li class="psw-valid-li" id="pvl2">atleast one uppercase</li>
+                        <li class="psw-valid-li" id="pvl3">atleast one lowercase</li>
+                        <li class="psw-valid-li" id="pvl4">atleast one special character</li>
+                        <li class="psw-valid-li" id="pvl5">atleast one number</li>
+                    </ul>
+                    <span class="mandatory" id="cpsw-valid"></span>
+                    <div class="inputdiv">
+                        <input id="in-dno" class="input" type="text" placeholder="Door No" oninput="dnoValid()">
+                        <input id="in-street" class="input" type="text" placeholder="Street" oninput="streetValid()">
+                    </div>
+                    <span id="dno-span" class="mandatory">This field is Mandatory</span><span id="street-span"
+                        class="mandatory">This field is Mandatory</span>
+                    <div class="inputdiv">
+                        <input id="in-landmark" class="input" type="text" placeholder="Land Mark"
+                            oninput="landmarkValid()">
+                        <input id="in-pincode" class="input" type="number" placeholder="PIN Code"
+                            oninput="districtApi()">
+                    </div>
+                    <span id="landmark-span" class="mandatory">This field is Mandatory</span>
+                    <span class="mandatory" id="pin-valid"></span>
+                    <div class="inputdiv">
+                        <input id="in-district" class="input" type="text" placeholder="District" disabled>
+                        <input id="in-state" class="input" type="text" placeholder="State" disabled>
+                    </div>
+                    <div id="subtn-div">
+                        <div id="load"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                        <input type="submit" id="reg-input-btn" value="Sign Up">
+                    </div>
+                </form>
+                <p id="allready">already you have account? <a href="#" id="signin-btn">Sign In</a></p>
+            </div>
+            <div id="signindiv">
+                <h1>Log In as Vendor</h1>                                                                                                                                                       
+                <form id="loginform">
+                    <span id="clarity1">Account created Successfully</span>
+                    <input id="log-in-email" class="log-input" type="email" placeholder="Email">
+                    <span id="wemail" class="mandatory">Invalid Email</span>
+                    <div id="log-psw-div">
+                        <input id="log-in-psw" class="log-input" type="password" placeholder="Password">
+                        <div>
+                            <i id="log-eye" class="fa-solid fa-eye" onmousedown="showlpsw()" onmouseup="hidelpsw()"></i>
+                        </div>
+                    </div>
+                    <span id="wpsw" class="mandatory">Wrong Password</span>
+                    <input type="submit" id="log-input-btn" value="Sign In">
+                </form>
+                <a id="forgotpsw" href="#">forgot Password</a>
+                <p id="allready">don't have account? <a href="#" id="signup-btn">Create Account</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="./Js/VendorReg.js"></script>
+</body>
+
+</html>

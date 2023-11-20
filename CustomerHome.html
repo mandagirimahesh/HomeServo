@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/CustomerHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Customer Home</title>
+</head>
+
+<body>
+    <div id="pop">
+        <div id="pop1">
+            <div id="pops1">
+                <p class="popp"><i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i> Are you sure!!!</p>
+                <p class="popp">You want to delete Your account.</p>
+            </div>
+            <div id="pops2">
+                <button class="confirm-delete" id="cancel-delete">Cancel</button>
+                <button class="confirm-delete" id="do-delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <main id="main1">
+        <section id="section1">
+            <nav id="nav">
+                <h1 id="logo">Home<i class="fa-solid fa-house-laptop"></i>servO</h1>
+            </nav>
+            <nav id="sub-nav">
+                <ol id="sub-nav-ol">
+                    <li class="sub-nav-li"><a class="toreg" href="#">Contact</a></li>
+                    <li class="sub-nav-li"><a class="toreg" href="#">About</a></li>
+                    <li class="sub-nav-li" id="logout">Log out <i class="fa-solid fa-right-from-bracket"></i></li>
+                </ol>
+            </nav>
+        </section>
+    </main>
+    <main id="ch-main2">
+        <section id="section2">
+            <div id="cont">
+                <div id="c-work-div">
+                    <div id="search-div">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="search-work" type="search" placeholder="Search works">
+                    </div>
+                    <input type="button" id="c-work-btn" value="Create Work">
+                </div>
+                <div id="create-work">
+                    <h2>Create work</h2>
+                    <form id="cw-form">
+                        <div id="cw-form-div">
+                            <label for="cw-name">Work Type :</label>
+                            <input type="text" id="cw-name" class="cw-inp cw-inp1" placeholder="Work Name">
+                            <span id="cw-name-span" class="cw-span"></span>
+                            <label for="cw-dno">Address :</label>
+                            <input type="text" id="cw-dno" class="cw-inp cw-inp1" placeholder="Door No">
+                            <span id="cw-dno-span" class="cw-span"></span>
+                            <input type="text" id="cw-street" class="cw-inp cw-inp1" placeholder="Street">
+                            <span id="cw-street-span" class="cw-span"></span>
+                            <input type="text" id="cw-landmark" class="cw-inp cw-inp1" placeholder="Land Mark">
+                            <span id="cw-landmark-span" class="cw-span"></span>
+                            <input type="text" id="cw-pincode" class="cw-inp cw-inp1" placeholder="Pin Code" oninput="districtApi()">
+                            <span id="cw-pincode-span" class="cw-span"></span>
+                            <div id="cw-ds"><span id="cw-dist" class="cw-ds"> </span>,<span id="cw-state" class="cw-ds"> </span></div>
+                            <label for="cw-desc">Dscripotion :</label>
+                            <textarea type="text" id="cw-desc" class="cw-inp cw-inp2"></textarea>
+                            <span id="cw-desc-span" class="cw-span"></span>
+                            <input type="submit" id="cw-sub-btn" class="cw-inp" value="Create">
+                        </div>
+                    </form>
+                </div>
+                <div id="work-btn-div">
+                    <button id="awb" class="work-btn" onclick="worksList()">all works</button>
+                    <button id="cwb" class="work-btn" onclick="worksList2()">completed</button>
+                </div>
+                <div id="work-list-header">
+                    <h4>Work Type</h4>
+                    <h4>Address</h4>
+                    <h4></h4>
+                </div>
+                
+                <div id="cworks-list-div">
+                    
+                </div>
+                <div id="cworks-list-div2">
+                    
+                </div>
+            </div>
+            </div>
+
+        </section>
+        <aside id="ch-aside1">
+            <div id="div-profile">
+                <div id="div-profile2">
+                    <div id="div-profile-pic"><img src="./Image/profile.jpg" alt=""></div>
+                    <div id="div-profile-details">
+                        <h2 id="username">Vikram</h2>
+                        <p id="userphone">8123456789</p>
+                        <p id="useremail">vikram@gmail.com</p>
+                    </div>
+                </div>
+                <div id="div-profile3">
+                    <p>id : <span id="userid">123</span></p>
+                    <button id="userupdate">Update <i class="fa-solid fa-pen-to-square"></i></button>
+                    <button id="userdelete"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+            <div id="cus-update">
+                <div id="can-up-div">
+                    <h3>Update Profile</h3>
+                <button id="cancel-up"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <div id="cus-update2">
+                    <input type="text" id="cus-up-name" class="cus-up cus-up2" placeholder="Name">
+                    <input type="email" id="cus-up-email" class="cus-up cus-up2" placeholder="Email">
+                    <input type="number" id="cus-up-phone" class="cus-up cus-up2" placeholder="Phone">
+                    <input type="text" id="cus-up-psw" class="cus-up cus-up2" placeholder="Password">
+                    <input type="number" id="cus-up-fc" class="cus-up cus-up2" placeholder="Family Count">
+                    <input type="text" id="cus-up-dno" class="cus-up cus-up2" placeholder="Door No">
+                    <input type="text" id="cus-up-street" class="cus-up cus-up2" placeholder="Street">
+                    <input type="text" id="cus-up-landmark" class="cus-up cus-up2" placeholder="Land Mark">
+                    <input type="number" id="cus-up-pincode" class="cus-up cus-up2" placeholder="Pin Code" oninput="districtApiupdate()">
+                    <div id="up-ds" class="up-ds"><span id="up-ds-d"> </span><span id="up-ds-s"> </span></div>
+                    <button id="cus-up-btn">Update</button>
+                    <span id="up-done">Updated Successfully</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./Js/customerHome.js"></script>
+</body>
+
+</html>

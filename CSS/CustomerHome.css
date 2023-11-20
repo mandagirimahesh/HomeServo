@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Qwitcher+Grypen&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#pop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: #00000082;
+    display: none;
+    /* display: grid; */
+    place-items: center;
+
+    #pop1 {
+        padding: 30px;
+        height: 250px;
+        width: 450px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        display: grid;
+
+        #pops1 {
+            place-self: end center;
+            text-align: center;
+            .popp{
+                margin-bottom: 20px;
+            }
+        }
+
+        #pops2 {
+            place-self: end;
+
+            .confirm-delete {
+                border: none;
+                cursor: pointer;
+                height: 25px;
+                width: 100px;
+                border-radius: 4px;
+            }
+            #cancel-delete{
+                background-color: white;
+            }
+            #do-delete{
+                background-image: linear-gradient(to bottom, #fb6969, #dc2121);
+            }
+            #do-delete:hover {
+                background-image: linear-gradient(to bottom, #dc2121, #fb6969);
+            }
+        }
+    }
+}
+
+#ch-main2 {
+    display: flex;
+    justify-content: center;
+}
+
+#section2 {
+    width: 75%;
+    height: 92vh;
+    padding: 20px;
+}
+
+#cont {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#ch-aside1 {
+    height: 90vh;
+    width: 350px;
+    min-width: 300px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#div-profile {
+    height: 150px;
+    width: 90%;
+    padding: 15px;
+    background-color: #ffffff50;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+#div-profile2 {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+#div-profile-pic {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#div-profile-pic>img {
+    height: inherit;
+    width: inherit;
+}
+
+#div-profile-details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2px;
+}
+
+#div-profile-details>p {
+    font-size: 13px;
+}
+
+#div-profile3 {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#div-profile3>p {
+    font-size: 13px;
+    color: #b6b6b6;
+    flex: 1;
+}
+
+#userupdate {
+    height: 25px;
+    width: 100px;
+    border: none;
+    background-image: linear-gradient(to bottom, #42ffba, #0cde91);
+    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    color: #5e5e5e;
+}
+
+#userupdate:hover {
+    /* background-image: none;
+    background-color: #0cde91; */
+    color: #000000;
+    background-image: linear-gradient(to bottom, #0cde91, #42ffba);
+}
+
+#userdelete {
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #fb6969, #dc2121);
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+}
+
+#userdelete:hover {
+    background-image: linear-gradient(to bottom, #dc2121, #fb6969);
+}
+
+/*       Customer Update  ------------------------------------------------------------------------------      */
+#cus-update {
+    padding: 20px;
+    width: 90%;
+    height: 420px;
+    background-color: #ffffff50;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#can-up-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cus-update2 {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.cus-up {
+    padding: 0px 5px;
+    height: 25px;
+    width: 210px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    outline: none;
+}
+
+.cus-up:focus {
+    height: 30px;
+    outline: 1px solid;
+    border-radius: 4px;
+}
+
+#cus-up-btn {
+    margin-top: 10px;
+    height: 30px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cus-up-btn:hover {
+    background-color: #3d3d3d;
+}
+
+.up-ds {
+    margin-top: -8px;
+    justify-content: end;
+    font-size: 12px;
+    color: #00cb00;
+}
+
+#cancel-up {
+    height: 30px;
+    width: 30px;
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#cancel-up:hover {
+    background-color: #0000001c;
+}
+
+#up-done {
+    margin-top: -5px;
+    font-size: 13px;
+    color: #00be00;
+    text-align: center;
+    display: none;
+}
+
+/*  Customer works operations  */
+
+#c-work-div {
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+#search-div {
+    margin: auto;
+    padding: 0px 10px;
+    border: 1px solid;
+    height: 35px;
+    width: 450px;
+    border-radius: 40px;
+}
+
+#search-work {
+    padding: 0px 10px;
+    height: 100%;
+    width: 400px;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    border: none;
+}
+
+#c-work-btn {
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+
+
+/*   Create Work form */
+#create-work {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+}
+
+#create-work>h2 {
+    margin-left: 20%;
+}
+
+#cw-form {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cw-form-div {
+    width: 330px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cw-inp {
+    align-self: flex-start;
+    width: 300px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #5e5e5e;
+}
+
+.cw-inp1 {
+    height: 30px;
+}
+
+.cw-inp2 {
+    padding: 10px;
+    height: 100px;
+}
+
+#cw-form-div>label {
+    margin-top: 5px;
+    font-size: 14px;
+    margin-bottom: -8px;
+    letter-spacing: .1px;
+}
+
+#cw-ds {
+    margin-top: -10px;
+    font-size: 12px;
+    text-align: right;
+    color: green;
+}
+
+#cw-sub-btn {
+    margin-top: 10px;
+    height: 35px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#cw-sub-btn:hover {
+    background-color: #3d3d3d;
+}
+
+.cw-span {
+    margin-top: -10px;
+    font-size: 12px;
+    text-align: right;
+    color: red;
+}
+
+#cw-ds {
+    display: none;
+}
+
+/* css for works list for vendor --------------------------------------------------------- */
+
+/* #works-list-div::-webkit-scrollbar {
+    display: none;
+} */
+
+#work-btn-div {
+    margin-bottom: 10px;
+}
+
+.work-btn {
+    padding: 5px 10px;
+    height: 30px;
+    width: auto;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.work-btn:hover {
+    background-color: #e1e1e1;
+}
+
+
+
+#work-list-header {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 50% auto auto;
+    place-items: center;
+    column-gap: 20px;
+}
+
+
+
+#works-list-div1,
+#works-list-div2,
+#works-list-div3,
+#cworks-list-div,
+#cworks-list-div2 {
+    height: 90%;
+    width: 100%;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+#work-item-div {
+    height: 120px;
+    min-height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #b6b6b6;
+
+    display: inline-grid;
+    grid-template-columns: 50% 30% auto;
+    column-gap: 20px;
+}
+
+#work-item-div2 {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+#g-work-desc {
+    font-size: 14px;
+    place-self: start;
+}
+
+#g-work-id {
+    font-size: 13px;
+    color: #5e5e5e;
+    place-self: end start;
+}
+
+#item-address {
+    display: grid;
+
+    #id1 {
+        align-self: end;
+        justify-self: center;
+    }
+
+    #id2 {
+        place-self: center;
+    }
+
+    #id3 {
+        align-self: start;
+        justify-self: center;
+    }
+}
+
+#start-work-btn,
+#end-work-btn,
+#pay-work-btn,
+#payme-work-btn{
+    height: 30px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 2px;
+    place-self: center;
+    border-radius: 4px;
+}
+
+/* Cost Per Day ------------------------------------------------------------------------ */
+#cpd{
+    height: 30px;
+    width: 100px;
+    margin-bottom: 20px;
+    padding: 5px;
+}

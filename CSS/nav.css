@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #e8f8f5;
+}
+
+#main1 {
+  height: 55px;
+  border-bottom: 1px solid black;
+}
+#logo {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#section1 {
+  margin: auto;
+  width: 85%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* filter: drop-shadow(5px 5px 10px #ffffff); */
+}
+#sub-nav {
+  height: inherit;
+}
+#sub-nav-ol {
+  list-style: none;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  height: inherit;
+  gap: 30px;
+}
+.toreg,#logout{
+  text-decoration: none;
+  color: black;
+  height: 30px;
+  width: auto;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 7px 10px;
+  letter-spacing: -0.4;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease-out;
+}
+.toreg:hover,#logout:hover {
+  color: #ffffff;
+  background-color: black;
+}
+.sub-nav1 {
+  width: 100px;
+  position: absolute;
+  padding: 0%;
+  list-style: none;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #d4d4d4;
+  display: none;
+}
+#sub-nav1 {
+  left: 79%;
+}
+#sub-nav2 {
+  left: 86%;
+}
+#sub-nav1 li,
+#sub-nav2 li {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 20px;
+  border: 1px solid;
+}
+.sub-nav1 li a {
+  padding: 0px 15px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 17px;
+  color: black;
+  border: 1px solid;
+}
+#drop-down {
+  width: 200px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.dropdown-li {
+  width: inherit;
+  padding: 15px 10px 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #b637b2;
+  text-align: start;
+  background-color: #ffffff;
+  font-size: small;
+}
+.dropdown-li:hover {
+  background-color: #b637b2;
+  color: #ffffff;
+  transition: ease all 0.5s;
+}
+
+#bg-image {
+  background-image: url("../Image/HOME-CLEANING.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+}
